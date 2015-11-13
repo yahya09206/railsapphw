@@ -1,0 +1,11 @@
+<h1>My Bog</h1>
+
+<%= link_to 'New bog', new_bog_path %>
+
+<% @bogs.each do |bog| %>
+<div class="well">
+	<h2><%= link_to bog.name, bog %></h2>
+	<%= link_to 'Edit', edit_bog_path(bog), class: 'btn btn-primary' %>
+	<%= link_to 'Delete', bog, class: 'btn btn-danger', method: delete %>
+</div>
+<% end %>
