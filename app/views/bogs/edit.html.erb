@@ -1,2 +1,8 @@
-<h1>Bogs#edit</h1>
-<p>Find me in app/views/bogs/edit.html.erb</p>
+<h1>Edit creature</h1>
+
+<%= bootstrap_form_for @bog do |b| %>
+	<%= b.text_field :name %>
+	<%= b.text_area :description %>
+	<%= c.primary %>
+
+<% end %>

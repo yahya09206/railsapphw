@@ -21,14 +21,13 @@ class BogsController < ApplicationController
   end
 
   def update
-    b = Bog.find params[:id]
-    b.update bog_params
+    bog = Bog.find params[:id]
+    bog.update bog_params
     redirect_to bogs_path
   end
 
   def destroy
-    b = Bog.find params[:id]
-    b.delete
+    Bog.find(params[:id]).delete
     redirect_to bogs_path
   end
 
